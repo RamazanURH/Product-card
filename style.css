@@ -1,0 +1,75 @@
+body {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  color: #515076;
+}
+
+.catalog__heading {
+  font-size: 70px;
+  line-height: 78px;
+  text-align: center;
+}
+
+.catalog__wrapper {
+  list-style: none;
+}
+
+.catalog__inner {
+  max-width: 340px;
+  max-height: 573px;
+  padding: 25px;
+  box-sizing: border-box;
+  margin: 45px;
+  background: #f7f7fa;
+}
+
+.catalog__image {
+  margin-bottom: 30px;
+}
+
+.catalog__desc {
+  display: inline-block;
+  font-size: 12px;
+  line-height: 24px;
+  line-height: 2;
+  color: #a5a3b9;
+  margin-bottom: 5px;
+}
+
+.catalog__title {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 27px;
+  margin-bottom: 5px;
+}
+
+.catalog__text {
+  font-size: 13px;
+  line-height: 18px;
+  margin-bottom: 15px;
+}
+
+.catalog__ingredients {
+  font-size: 13px;
+  line-height: 18px;
+  margin-bottom: 5px;
+}
+
+.catalog__list {
+  font-size: 13px;
+  line-height: 18px;
+  margin-bottom: 5px;
+}
+
+.catalog__item {}
+
+.catalog__price {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 24px;
+}
+
+.catalog__price-rub {
+  font-size: 20px;
+  line-height: 24px;
+}
