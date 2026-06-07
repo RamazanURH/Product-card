@@ -1,0 +1,124 @@
+body {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  color: #515076;
+}
+
+.catalog {
+  max-width: 1110px;
+  max-width: 100%;
+  position: relative;
+}
+
+.catalog::before {
+  position: absolute;
+  content: "";
+  top: -220px;
+  left: 177px;
+  background: url(/img/bg.svg) 0 0 / 100% no-repeat;
+  width: 790px;
+  height: 697px;
+  z-index: -1;
+}
+
+.catalog__heading {
+  margin-top: 220px;
+  font-size: 70px;
+  line-height: 78px;
+  text-align: center;
+}
+
+.catalog__content {
+  margin: 110px auto 116px;
+}
+
+.catalog__wrapper {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.catalog__inner {
+  max-width: 340px;
+  padding: 25px;
+  box-sizing: border-box;
+  margin: 22.5px;
+  box-shadow: 2px 2px 10px 0 rgba(81, 80, 118, 0.1);
+  background: #f7f7fa;
+}
+
+.catalog__image {
+  margin-bottom: 30px;
+  box-shadow: 2px 2px 10px 0 rgba(81, 80, 118, 0.1);
+}
+
+.catalog__desc {
+  display: inline-block;
+  font-size: 12px;
+  line-height: 24px;
+  line-height: 2;
+  color: #a5a3b9;
+  margin-bottom: 5px;
+}
+
+.catalog__title {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 27px;
+  margin: 0 0 5px;
+}
+
+.catalog__text {
+  font-size: 13px;
+  line-height: 18px;
+  margin: 0 0 15px;
+}
+
+.catalog__ingredients {
+  display: inline-block;
+  font-size: 13px;
+  line-height: 18px;
+  margin-bottom: 5px;
+}
+
+.catalog__list {
+  font-size: 13px;
+  line-height: 18px;
+  padding-left: 15px;
+  list-style: none;
+}
+
+.catalog__item {
+  position: relative;
+  margin-bottom: 5px;
+}
+
+.catalog__item::before {
+  position: absolute;
+  content: "";
+  top: 50%;
+  transform: translateY(-50%);
+  left: -13px;
+  border: 1px solid #515076;
+  border-radius: 50%;
+  width: 5px;
+  height: 5px;
+}
+
+.catalog__price-list {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 25px;
+}
+
+.catalog__price {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 24px;
+}
+
+.catalog__price-rub {
+  font-size: 20px;
+  line-height: 24px;
+}
