@@ -15,7 +15,7 @@ body {
   content: "";
   top: -220px;
   left: 177px;
-  background: url(/img/bg.svg) 0 0 / 100% no-repeat;
+  background: url("/img/background.svg") 0 0 / 100% no-repeat;
   width: 790px;
   height: 697px;
   z-index: -1;
