@@ -42,6 +42,6 @@ titleFocus.addEventListener('mouseover', () => {
   console.log(titleFocus.textContent)
 });
 
-BtnColor.addEventListener('click', () => {
-  BtnColor.classList.toggle('catalog__color-active')
+btnColor.addEventListener('click', () => {
+  btnColor.classList.toggle('catalog__color-active')
 });
