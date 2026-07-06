@@ -124,3 +124,11 @@ body {
   font-size: 20px;
   line-height: 24px;
 }
+
+.catalog__color {
+  background-color: rgb(96, 155, 94);
+}
+
+.catalog__color-active {
+  background-color: rgb(197, 63, 63);
+}
