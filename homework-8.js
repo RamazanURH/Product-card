@@ -23,14 +23,14 @@ car.owner = user;
 
 // №5 Создал функцию для проверки обьекта, есть ли в нем максимальная скорость
 
-function hasMaxSpeed (car) {
+function addMaxSpeed (car) {
   if (car.maxSpeed === undefined) {
     car.maxSpeed = 340
   } else {
     return
   }
 };
-hasMaxSpeed(car);
+addMaxSpeed(car);
 
 // №6 Создал функцию для вывода свойства объекта
 
@@ -44,28 +44,64 @@ const products = ['milk', 'cheese', 'butter', 'eggs', 'yogurt'];
 
 // №8 Создал моссив состоящий из объектов и добавил обьект в конец через (push)
 
-const books1 = [
-  { title: 'Граф Монте-Кристо', author: 'Александр Дюма', year: 1844, coverColor: "синий", genre: "приключения"},
-  { title: 'Три мушкетёра', author: 'Александр Дюма', year: 1844, coverColor: "красный", genre: "исторический роман" },
-  { title: 'Богатый папа, бедный папа', author: 'Роберт Кийосаки', year: 1997,},
-  { title: 'Миссия выполнима. Технология счастливой жизни', author: 'Маргулан Сейсембай', year: 2023,},
+const collectionBooks = [
+  { 
+    title: 'Граф Монте-Кристо', 
+    author: 'Александр Дюма', 
+    year: 1844, 
+    coverColor: "синий", 
+    genre: 'приключения'
+  },
+  { 
+    title: 'Три мушкетёра', 
+    author: 'Александр Дюма', 
+    year: 1844, 
+    coverColor: "красный", 
+    genre: 'исторический роман' 
+  },
+  { 
+    title: 'Богатый папа, бедный папа', 
+    author: 'Роберт Кийосаки', 
+    year: 1997,
+  },
+  { 
+    title: 'Миссия выполнима. Технология счастливой жизни', 
+    author: 'Маргулан Сейсембай', 
+    year: 2023,
+  },
 ];
 
-books1.push({ title: 'Тарас Бульба', author: 'Николай Гоголь', year: 1835, genre: 'историческая повесть'});
+collectionBooks.push({ title: 'Тарас Бульба', author: 'Николай Гоголь', year: 1835, genre: 'историческая повесть'});
 
 // №9 Создал еще один массив и объеденил его с первым 
 
-const books2 = [
-  { title: 'Гарри Поттер и философский камень', author: 'Джоан Роулинг', year: 1997, coverColor: "зелёный", genre: "фэнтези" },
-  { title: 'Гарри Поттер и Тайная комната', author: 'Джоан Роулинг', year: 1998, coverColor: "синий", genre: "фэнтези" },
-  { title: 'Гарри Поттер и узник Азкабана', author: 'Джоан Роулинг', year: 1999, coverColor: "фиолетовый", genre: "фэнтези" }
+const harryPotterBooks = [
+  { 
+    title: 'Гарри Поттер и философский камень',
+    author: 'Джоан Роулинг', year: 1997, 
+    coverColor: 'зелёный', 
+    genre: 'фэнтези' 
+  },
+  { 
+    title: 'Гарри Поттер и Тайная комната', 
+    author: 'Джоан Роулинг', 
+    year: 1998, 
+    coverColor: 'синий', 
+    genre: 'фэнтези' 
+  },
+  { 
+    title: 'Гарри Поттер и узник Азкабана', 
+    author: 'Джоан Роулинг', 
+    year: 1999, 
+    coverColor: 'фиолетовый', 
+    genre: 'фэнтези' }
 ];
 
-const books3 = [...books1, ...books2];
+const allBooks = [...collectionBooks, ...harryPotterBooks];
 
 // №10 Создал функцию для проверки книги на редкость с помощью метода map
 
-const canBooks = books3.map( function(book) {
+const booksWithIsRare = allBooks.map( function(book) {
   if (book.year > 2000) {
     return {
       ...book,
@@ -79,4 +115,4 @@ const canBooks = books3.map( function(book) {
   }
 });
 
-console.log(canBooks)
+console.log(booksWithIsRare)
