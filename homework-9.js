@@ -1,3 +1,5 @@
+import { comments } from './comments.js';
+
 // Уровень 1:
 // № 2 Создал массив чисел и отфильровал его от 5 до 10
 
@@ -26,9 +28,6 @@ reverseArray(movieTitles)
 reverseArray(arrayOfNumbers)
 
 // Уровень 2:
-// № 6 
-import { comments } from './comments.js';
-
 //№7 Вывел в концоль те массивы в которых почта заканчивается на ".com"
 
 const commentsWithComEmails = comments.filter(comment => comment.email.includes('.com'));
@@ -54,16 +53,9 @@ const shortComments = comments.map(comment => {
 // №10 Перебирал массив, добавил объектам свойство isInvalid и проверил: если длина сообщения больше 180 символов - true, меньше - false.
 
 const validatedComments = comments.map(comment => {
-  if (comment.body.length > 180) {
-    return {
+  return {
     ...comment,
-    isInvalid: true
-    }
-  } else {
-    return {
-    ...comment,
-    isInvalid: false
-    }
+    isInvalid: comment.body.length > 180 
   }
 });
 
