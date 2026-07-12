@@ -56,8 +56,9 @@ const validatedComments = comments.map(comment => {
   return {
     ...comment,
     isInvalid: comment.body.length > 180 
-  }
+  };
 });
+console.log( validatedComments)
 
 // Уровень 3:
 // №11 
