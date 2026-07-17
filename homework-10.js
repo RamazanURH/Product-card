@@ -18,11 +18,11 @@ function renderProducts(productsArray, countToDisplay) {
   const productsToShow = productsArray.slice(0, countToDisplay)
   productsToShow.forEach(product => {
     const productClone = productTemplate.content.cloneNode(true)
-    productClone.querySelector('.catalog__image').src = product.img
+    productClone.querySelector('.catalog__image').src = `img/${product.img}.png`
     productClone.querySelector('.catalog__desc').textContent = product.skinType
     productClone.querySelector('.catalog__title').textContent = product.title
     productClone.querySelector('.catalog__text').textContent = product.description
-    productClone.querySelector('.catalog__price-rub').textContent = `${product.price}₽`
+    productClone.querySelector('.catalog__price-rub').textContent = `${product.price} \u20BD`
     const listElement = productClone.querySelector('.catalog__list')
     listElement.innerHTML = ''
     product.ingredients.forEach(ingredient => {
@@ -33,13 +33,13 @@ function renderProducts(productsArray, countToDisplay) {
     })
     productlist.appendChild(productClone)
   })
-}
+};
 
 
 const countToDisplay = getCardCount();
 renderProducts(products, countToDisplay);
 
 const catalog = products.reduce((acc, product) => {
-  acc[product.title] = product.description
+  acc.push({ [product.title]: product.description })
   return acc
-}, {})
+}, []);
