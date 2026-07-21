@@ -16,7 +16,7 @@ body {
   content: "";
   top: -230px;
   left: 0px;
-  background: url("/img/catalog_bg.png") 0 0 / 100% no-repeat;
+  background: url("/img/background.svg") 0 0 / 100% no-repeat;
   width: 790px;
   height: 697px;
   z-index: -1;
