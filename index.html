@@ -4,12 +4,14 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style/reset.css">
   <link rel="stylesheet" href="style/style.css">
   <link rel="stylesheet" href="style/fonts.css">
   <title>Document</title>
 </head>
 <body>
   <div class="catalog">
+    <button class="modal__registry">зарегистрироваться</button>
     <h1 class="catalog__heading">Выберите свой продукт</h1>
     <div class="catalog__content">
       <ul id="product-list" class="catalog__wrapper">
@@ -31,8 +33,75 @@
       </ul>
     </div>
   </div>
+  <div class="footer__container">
+    <div class="footer__top">
+      <div class="footer__info">
+        <h2 class="footer__title">Product Cards</h2>
+        <p class="footer__text">У нас самые лучшие продукты для кожи!</p>
+        <div class="footer__icon">
+          <img src="/img/tg-icon.svg" alt="Иконка телеграм">
+          <img src="/img/vk-icon.svg" alt="Иконка ВК">
+        </div>
+      </div>
+      <div class="footer__subscribe">
+        <h4 class="footer__subscribe-title">Подпишись на наши акции:</h4>
+        <form class="footer__form" action="#">
+          <label for="email-footer">email</label>
+          <input id="email-footer" class="footer__input" type="email" placeholder="Введи Email..." name="email" required>
+          <button class="footer__btn" type="submit">Подписаться</button>
+        </form>
+      </div>  
+      <div class="footer__list">
+        <h4 class="footer__list-title">Быстрые ссылки</h4>
+        <nav class="footer__nav">
+          <ul class="footer__menu">
+          <li class="footer__menu-item">
+            <a class="footer__list-link" href="#">Главная</a>
+          </li>
+          <li class="footer__menu-item">
+            <a class="footer__list-link" href="#">Магазин</a>
+          </li>
+          <li class="footer__menu-item">
+            <a class="footer__list-link" href="#">Контакты</a>
+          </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <span class="footer__divider"></span>
+      <p class="footer__copyright">www.product-cards.com &copy; all rights reserved</p>
+    </div>
+  </div>
+  <div class="modal">
+    <div class="modal__body">
+      <div class="modal__content">
+        <button class="modal__close">x</button>
+        <form class="modal__form">
+          <label for="name">Имя</label>
+          <input id="name" class="modal__input" type="text" placeholder="Введите имя" name="name" required>
+          <label for="surname">Фамилия</label>
+          <input id="surname" class="modal__input" type="text" placeholder="Введите фамилие" name="surname" required>
+          <label for="date">Дата рождения</label>
+          <input id="date" class="modal__input" type="date" name="date" required>
+          <label for="email">Почта</label>
+          <input id="email" class="modal__input" type="email" placeholder="Введите почту" name="email" required>
+          <label for="password">Пароль</label>
+          <input id="password" class="modal__input" type="password" placeholder="Введите пароль" name="password" required>
+          <label for="password-repeat">Повтор пароля</label>
+          <input id="password-repeat" class="modal__input" type="password" placeholder="Повторите пароль" name="password-repeat" required>
+          <span class="password-error"></span>
+          <div class="modal__btn-box">
+            <button class="modal__btn modal__btn-left" type="reset">Сбросить</button>
+            <button class="modal__btn" type="submit">Отправить</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
 
   <script src="homework-10.js" type="module"></script>
+  <script src="homework-11.js" type="module"></script>
 </body>
 
 </html>
